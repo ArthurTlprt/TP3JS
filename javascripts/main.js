@@ -18,7 +18,7 @@ function display(bool){
 - Longueur de mot de passe entre 8 et 12 caractères
 */
 
-function isCorrect(password){
+function isPasswordCorrect(password){
   var regMinus = /[a-z]/;
   var matchMinus = password.match(regMinus);
   var regMajus = /[A-Z]/;
@@ -55,7 +55,25 @@ function getCorrectPassword(){
     i++;
     if(i == 100) return;
     var password = generatePassword();
-  } while (!isCorrect(password));
+  } while (!isPasswordCorrect(password));
   document.getElementById('passwordField').type='text';
   document.getElementById('passwordField').value=password;
+}
+
+function isNameCorrect(name){
+  if(name.length < 6 || name.length > 12){
+    return false;
+  }
+  return true;
+}
+
+function isCorrect(id){
+  var value = document.getElementById(id).value;
+  if(id == 'passwordField'){
+    return isPasswordCorrect(value);
+  }else if (id == 'nameField') {
+    return isNameCorrect(value);
+  }else{
+    return (value != undefined && value.length > 0);  
+  }
 }
