@@ -69,11 +69,23 @@ function isNameCorrect(name){
 
 function isCorrect(id){
   var value = document.getElementById(id).value;
-  if(id == 'passwordField'){
-    return isPasswordCorrect(value);
-  }else if (id == 'nameField') {
-    return isNameCorrect(value);
+  console.log(document.getElementById(id).firstChild.value);
+  if(id == 'passwordLabel'){
+    setClass(isPasswordCorrect(document.getElementById(id).firstChild.value), id);
+    return isPasswordCorrect(document.getElementById(id).firstChild.value);
+  }else if (id == 'nameLabel') {
+    setClass(isNameCorrect(document.getElementById(id).firstChild.value), id);
+    return isNameCorrect(document.getElementById(id).firstChild.value);
   }else{
-    return (value != undefined && value.length > 0);  
+    return (value != undefined || value.length > 0);
+  }
+}
+
+
+function setClass(bool, id){
+  if (bool) {
+    document.getElementById(id).className = 'Valide';
+  }else{
+    document.getElementById(id).className = 'Valide';
   }
 }

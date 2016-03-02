@@ -43,9 +43,9 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
 
 	<form action="ex1.php" method="get">
 		<fieldset>
-			<label title="Name" id="name" class="info" for="name" onclick="setFocusToTextBox('nameField');return false;">Name
-			<input id="nameField" type="text" name="name" autofocus/></label>
-			<label title="Password" id="password" class="info" for="password" onclick="setFocusToTextBox('passwordField');return false;" class="field">Password
+			<label id="nameLabel" onchange="isCorrect('nameLabel');return false; "title="Name" id="name" class="info" for="name" onclick="setFocusToTextBox('nameField');return false;">Name
+			<input  id="nameField" type="text" name="name" autofocus/></label>
+			<label id="passwordLabel" onchange="isCorrect('nameLabel');return false;" title="Password" id="password" class="info" for="password" onclick="setFocusToTextBox('passwordField');return false;" class="field">Password
 			<input id="passwordField" type="password" name="password" autofocus/></label>
 			<button onclick="display(false);return false; "type="button">hide password</button>
 			<button onclick="display(true);return false; "type="button">display password</button>
