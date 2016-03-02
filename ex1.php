@@ -33,6 +33,7 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link rel="stylesheet" href="style/main.css" charset="utf-8">
+	<script src="javascripts/main.js" charset="utf-8"></script>
 </head>
 <!-- **** F I N **** H E A D **** -->
 
@@ -42,14 +43,16 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
 
 	<form action="ex1.php" method="get">
 		<fieldset>
-			<legend class="field">Name</legend>
-			<input class="field" type="text" name="name"/>
+			<legend id="name" class="field" onclick="setFocusToTextBox('nameField');return false;" class="field">Name</legend>
+			<input id="nameField" type="text" name="name" autofocus/>
+			<legend id="password" class="field" onclick="setFocusToTextBox('passwordField');return false;" class="field">Password</legend>
+			<input id="passwordField" type="text" name="password" autofocus/>
 			<legend class="field">Gender</legend>
-			<label class="info" for="male">Male
+			<label onmouseover="popUpExplication('Male');return false;" class="info" for="male">Male
 			<input class="fieldGender" id ="male" type="radio" name="gender" value="male"></label>
-			<label class="info" for="female">Female
+			<label onmouseover="popUpExplication('Female');return false;" class="info" for="female">Female
 			<input class="fieldGender" id ="female" type="radio" name="gender" value="female"></label>
-			<label class="info" for="other">Other
+			<label onmouseover="popUpExplication('Other');return false;" class="info" for="other">Other
 			<input class="fieldGender" id ="other" type="radio" name="gender" value="other"></label>
 			<legend class="field">Promo</legend>
 			<select class="field" name="promo">
