@@ -1,0 +1,43 @@
+.field {
+  display: block;
+  width: 10%;
+}
+
+.info {
+  display: block;
+  height: 10%;
+  background-image: url('../images/dialog-information.svg'), url('../images/dialog-information.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 25px 25px;
+  padding-left: 25px;
+}
+
+.info:hover{
+  border-style: dashed;
+  border-color: red;
+}
+
+.fieldGender{
+  display: inline-block;
+}
+
+.valide{
+  display: block;
+  height: 10%;
+  background-image: url('../images/face-wink.svg'), url('../images/face-wink.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 25px 25px;
+  padding-left: 25px;
+}
+
+.invalude{
+  display: block;
+  height: 10%;
+  background-image: url('../images/face-worried.svg'), url('../images/face-worried.png');
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 25px 25px;
+  padding-left: 25px;
+}
