@@ -3,18 +3,12 @@ function setFocusToTextBox(id){
     document.getElementById(id).focus();
 }
 
-function popUpExplication(fieldName){
-  if(fieldName == 'Password'){
-    var r = confirm("hide password");
-    if (r == true) {
-        document.getElementById('passwordField').type='password';
-    } else {
-        document.getElementById('passwordField').type='text';
-    }
-  }else{
-    alert(fieldName);
+function display(bool){
+  if (bool == true) {
+      document.getElementById('passwordField').type='text';
+  } else {
+      document.getElementById('passwordField').type='password';
   }
-
 }
 
 /*
@@ -62,7 +56,6 @@ function getCorrectPassword(){
     if(i == 100) return;
     var password = generatePassword();
   } while (!isCorrect(password));
-  return password;
+  document.getElementById('passwordField').type='text';
+  document.getElementById('passwordField').value=password;
 }
-
-console.log(getCorrectPassword());

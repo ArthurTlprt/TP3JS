@@ -43,17 +43,19 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
 
 	<form action="ex1.php" method="get">
 		<fieldset>
-			<label title="Name" id="name" onmouseover="popUpExplication('Name');return false;" class="info" for="name" onclick="setFocusToTextBox('nameField');return false;">Name
+			<label title="Name" id="name" class="info" for="name" onclick="setFocusToTextBox('nameField');return false;">Name
 			<input id="nameField" type="text" name="name" autofocus/></label>
-			<label title="Password" id="password" onmouseover="popUpExplication('Password');return false;" class="info" for="password" onclick="setFocusToTextBox('passwordField');return false;" class="field">Password
-			<input id="passwordField" type="password" name="password" autofocus/>
-			<input type="button" name="name" value=""></label>
+			<label title="Password" id="password" class="info" for="password" onclick="setFocusToTextBox('passwordField');return false;" class="field">Password
+			<input id="passwordField" type="password" name="password" autofocus/></label>
+			<button onclick="display(false);return false; "type="button">hide password</button>
+			<button onclick="display(true);return false; "type="button">display password</button>
+			<button onclick="getCorrectPassword();return false; "type="button">Generate!</button>
 			<legend class="field">Gender</legend>
-			<label title="Male" onmouseover="popUpExplication('Male');return false;" class="info" for="male">Male
+			<label title="Male" class="info" for="male">Male
 			<input class="fieldGender" id ="male" type="radio" name="gender" value="male"></label>
-			<label title="Female" onmouseover="popUpExplication('Female');return false;" class="info" for="female">Female
+			<label title="Female"class="info" for="female">Female
 			<input class="fieldGender" id ="female" type="radio" name="gender" value="female"></label>
-			<label title="Other" onmouseover="popUpExplication('Other');return false;" class="info" for="other">Other
+			<label title="Other" class="info" for="other">Other
 			<input class="fieldGender" id ="other" type="radio" name="gender" value="other"></label>
 			<legend class="field">Promo</legend>
 			<select class="field" name="promo">
