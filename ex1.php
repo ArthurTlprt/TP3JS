@@ -43,16 +43,17 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
 
 	<form action="ex1.php" method="get">
 		<fieldset>
-			<legend id="name" class="field" onclick="setFocusToTextBox('nameField');return false;" class="field">Name</legend>
-			<input id="nameField" type="text" name="name" autofocus/>
-			<legend id="password" class="field" onclick="setFocusToTextBox('passwordField');return false;" class="field">Password</legend>
-			<input id="passwordField" type="text" name="password" autofocus/>
+			<label title="Name" id="name" onmouseover="popUpExplication('Name');return false;" class="info" for="name" onclick="setFocusToTextBox('nameField');return false;">Name
+			<input id="nameField" type="text" name="name" autofocus/></label>
+			<label title="Password" id="password" onmouseover="popUpExplication('Password');return false;" class="info" for="password" onclick="setFocusToTextBox('passwordField');return false;" class="field">Password
+			<input id="passwordField" type="password" name="password" autofocus/>
+			<input type="button" name="name" value=""></label>
 			<legend class="field">Gender</legend>
-			<label onmouseover="popUpExplication('Male');return false;" class="info" for="male">Male
+			<label title="Male" onmouseover="popUpExplication('Male');return false;" class="info" for="male">Male
 			<input class="fieldGender" id ="male" type="radio" name="gender" value="male"></label>
-			<label onmouseover="popUpExplication('Female');return false;" class="info" for="female">Female
+			<label title="Female" onmouseover="popUpExplication('Female');return false;" class="info" for="female">Female
 			<input class="fieldGender" id ="female" type="radio" name="gender" value="female"></label>
-			<label onmouseover="popUpExplication('Other');return false;" class="info" for="other">Other
+			<label title="Other" onmouseover="popUpExplication('Other');return false;" class="info" for="other">Other
 			<input class="fieldGender" id ="other" type="radio" name="gender" value="other"></label>
 			<legend class="field">Promo</legend>
 			<select class="field" name="promo">
@@ -62,10 +63,10 @@ echo "<?xml version=\"1.0\" encoding=\"UTF-8\" ?>\n";
 			  <option value="p4">p4</option>
 			</select>
 			<legend>You're passionnate in:</legend>
-			<label class="field">Node.js<input  type="checkbox" name="techno1" value="Node.js"></label>
-			<label class="field">Bootstrap<input  type="checkbox" name="techno2" value="Bootstrap"></label>
-			<label class="field">Mongodb<input  type="checkbox" name="techno1" value="Mongodb"></label>
-			<label class="field">Jade<input  type="checkbox" name="techno2" value="Jade"></label>
+			<label title="Node.js" class="field">Node.js<input  type="checkbox" name="techno1" value="Node.js"></label>
+			<label title="Bootstrap" class="field">Bootstrap<input  type="checkbox" name="techno2" value="Bootstrap"></label>
+			<label title="Mongodb" class="field">Mongodb<input  type="checkbox" name="techno3" value="Mongodb"></label>
+			<label title="Jade" class="field">Jade<input  type="checkbox" name="techno4" value="Jade"></label>
 			<legend class="field">Cilck to submit</legend>
 			<input type="submit" />
 		</fieldset>
